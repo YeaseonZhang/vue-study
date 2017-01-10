@@ -19,6 +19,31 @@
             <p v-if="seen">Now you see me</p>
         </div>
 
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+
+        <div id="app-6">
+            <p>{{ model.text }}</p>
+            <input v-model="model.text">
+        </div>
+
+        <div id="app-7">
+            <ol>
+                <!-- v-bind:todo 是指绑定组件的 todo 属性 props: ['todo'] -->
+                <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item> 
+            </ol>
+        </div>
+
         <script src="./intro.js"></script>
     </body>
 </html>
