@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>List Render</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <ul id="list-1">
+            <li v-for="item of items">
+                {{ item.message }} 
+            </li>
+        </ul>
+
+        <ul id="list-2">
+            <li v-for="(item, index) of items">
+                {{ parentMessage }} - {{ index }} - {{ item.message }}
+            </li>
+        </ul>
+
+        <ul id="repeat-object">
+            <li v-for="(value, key, index) in object">
+                {{ index }}. {{ key }} : {{ value }}
+            </li>
+        </ul>
+        
+        <script src="./list-render.js"></script>
+    </body>
+</html>
