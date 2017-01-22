@@ -1,20 +1,20 @@
 <!DOCTYPE>
 <html>
     <head>
-        <title>Dynamic-matching</title>
+        <title>Nested-routes</title>
         <meta charset="utf-8">
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     </head>
     <body>
         <div id="app">
-            <h1>Hello App!</h1>
             <p>
-                <router-link to="/user/Yeaseon">Url: /user/Yeaseon</router-link>
-                <router-link to="/user/Yeaseon/age/24">Url: /user/Yeaseon/age/24</router-link>
+                <router-link to="/user/Yeaseon">/user/Yeaseon</router-link>
+                <router-link to="/user/Yeaseon/profile">/user/Yeaseon/profile</router-link>
+                <router-link to="/user/Yeaseon/posts">/user/Yeaseon/posts</router-link>
             </p>
             <router-view></router-view>
         </div>
-        <script src="./dynamic-matching.js"></script>
+        <script src="./nested-routes.js"></script>
     </body>
 </html>
